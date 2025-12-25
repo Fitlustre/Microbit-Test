@@ -17,10 +17,15 @@ basic.showLeds(`
 basic.forever(function on_forever() {
     while (true) {
         cuteBot.colorLight(cuteBot.RGBLights.RGB_R, 0x00ffff)
+        basic.pause(100)
         cuteBot.colorLight(cuteBot.RGBLights.RGB_L, 0x0000ff)
+        basic.pause(100)
         cuteBot.colorLight(cuteBot.RGBLights.RGB_R, 0xffffff)
+        basic.pause(100)
         cuteBot.colorLight(cuteBot.RGBLights.RGB_L, 0x007fff)
+        basic.pause(100)
         cuteBot.colorLight(cuteBot.RGBLights.RGB_R, 0x0000ff)
+        basic.pause(100)
         cuteBot.colorLight(cuteBot.RGBLights.RGB_L, 0xffffff)
     }
 })

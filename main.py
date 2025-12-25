@@ -21,9 +21,14 @@ basic.show_leds("""
 def on_forever():
     while True:
         cuteBot.color_light(cuteBot.RGBLights.RGB_R, 0x00ffff)
+        basic.pause(100)
         cuteBot.color_light(cuteBot.RGBLights.RGB_L, 0x0000ff)
+        basic.pause(100)
         cuteBot.color_light(cuteBot.RGBLights.RGB_R, 0xffffff)
+        basic.pause(100)
         cuteBot.color_light(cuteBot.RGBLights.RGB_L, 0x007fff)
+        basic.pause(100)
         cuteBot.color_light(cuteBot.RGBLights.RGB_R, 0x0000ff)
+        basic.pause(100)
         cuteBot.color_light(cuteBot.RGBLights.RGB_L, 0xffffff)
 basic.forever(on_forever)
