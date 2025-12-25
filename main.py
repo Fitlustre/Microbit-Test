@@ -1,12 +1,15 @@
-def on_bluetooth_connected():
-    basic.show_string("Ligado")
-bluetooth.on_bluetooth_connected(on_bluetooth_connected)
+def on_button_pressed_a():
+    cuteBot.forward()
+input.on_button_pressed(Button.A, on_button_pressed_a)
 
-def on_bluetooth_disconnected():
-    basic.show_string("Desligado")
-bluetooth.on_bluetooth_disconnected(on_bluetooth_disconnected)
+def on_button_pressed_ab():
+    cuteBot.stopcar()
+input.on_button_pressed(Button.AB, on_button_pressed_ab)
 
-bluetooth.start_uart_service()
+def on_button_pressed_b():
+    cuteBot.backforward()
+input.on_button_pressed(Button.B, on_button_pressed_b)
+
 basic.show_leds("""
     # . . # #
     # . # . .
@@ -14,3 +17,12 @@ basic.show_leds("""
     # # # . #
     . . # # .
     """)
+
+
+while True:
+    cuteBot.color_light(cuteBot.RGBLights.RGB_R, 0x00ffff)
+    cuteBot.color_light(cuteBot.RGBLights.RGB_L, 0x0000ff)
+    cuteBot.color_light(cuteBot.RGBLights.RGB_R, 0xffffff)
+    cuteBot.color_light(cuteBot.RGBLights.RGB_L, 0x007fff)
+    cuteBot.color_light(cuteBot.RGBLights.RGB_R, 0x0000ff)
+    cuteBot.color_light(cuteBot.RGBLights.RGB_L, 0xffffff)
