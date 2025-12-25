@@ -14,11 +14,13 @@ basic.showLeds(`
     # # # . #
     . . # # .
     `)
-while (true) {
-    cuteBot.colorLight(cuteBot.RGBLights.RGB_R, 0x00ffff)
-    cuteBot.colorLight(cuteBot.RGBLights.RGB_L, 0x0000ff)
-    cuteBot.colorLight(cuteBot.RGBLights.RGB_R, 0xffffff)
-    cuteBot.colorLight(cuteBot.RGBLights.RGB_L, 0x007fff)
-    cuteBot.colorLight(cuteBot.RGBLights.RGB_R, 0x0000ff)
-    cuteBot.colorLight(cuteBot.RGBLights.RGB_L, 0xffffff)
-}
+basic.forever(function on_forever() {
+    while (true) {
+        cuteBot.colorLight(cuteBot.RGBLights.RGB_R, 0x00ffff)
+        cuteBot.colorLight(cuteBot.RGBLights.RGB_L, 0x0000ff)
+        cuteBot.colorLight(cuteBot.RGBLights.RGB_R, 0xffffff)
+        cuteBot.colorLight(cuteBot.RGBLights.RGB_L, 0x007fff)
+        cuteBot.colorLight(cuteBot.RGBLights.RGB_R, 0x0000ff)
+        cuteBot.colorLight(cuteBot.RGBLights.RGB_L, 0xffffff)
+    }
+})

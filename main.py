@@ -18,11 +18,12 @@ basic.show_leds("""
     . . # # .
     """)
 
-
-while True:
-    cuteBot.color_light(cuteBot.RGBLights.RGB_R, 0x00ffff)
-    cuteBot.color_light(cuteBot.RGBLights.RGB_L, 0x0000ff)
-    cuteBot.color_light(cuteBot.RGBLights.RGB_R, 0xffffff)
-    cuteBot.color_light(cuteBot.RGBLights.RGB_L, 0x007fff)
-    cuteBot.color_light(cuteBot.RGBLights.RGB_R, 0x0000ff)
-    cuteBot.color_light(cuteBot.RGBLights.RGB_L, 0xffffff)
+def on_forever():
+    while True:
+        cuteBot.color_light(cuteBot.RGBLights.RGB_R, 0x00ffff)
+        cuteBot.color_light(cuteBot.RGBLights.RGB_L, 0x0000ff)
+        cuteBot.color_light(cuteBot.RGBLights.RGB_R, 0xffffff)
+        cuteBot.color_light(cuteBot.RGBLights.RGB_L, 0x007fff)
+        cuteBot.color_light(cuteBot.RGBLights.RGB_R, 0x0000ff)
+        cuteBot.color_light(cuteBot.RGBLights.RGB_L, 0xffffff)
+basic.forever(on_forever)
